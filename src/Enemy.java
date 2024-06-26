@@ -16,6 +16,9 @@ public class Enemy implements Mortal {
     public void takeDamage(int damage){
         health = health - damage;
         System.out.printf("The enemy received %d points of damage.\n", damage);
+        if(!this.isAlive()){
+            health = 0;
+        }
     }
 
     @Override
