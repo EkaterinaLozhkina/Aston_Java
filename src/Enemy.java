@@ -1,4 +1,4 @@
-public class Enemy {
+public class Enemy implements Mortal {
     private int health;
 
     public Enemy(int health) {
@@ -16,5 +16,10 @@ public class Enemy {
     public void takeDamage(int damage){
         health = health - damage;
         System.out.printf("The enemy received %d points of damage.\n", damage);
+    }
+
+    @Override
+    public boolean isAlive() {
+        return health > 0;
     }
 }
