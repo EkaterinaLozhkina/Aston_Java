@@ -4,7 +4,12 @@ public class Mage extends Hero {
     }
 
     @Override
-    public void attackEnemy() {
-        System.out.println("The mage attacks the enemy!");
+    public void attackEnemy(Enemy enemy) {
+        int damage = 12;
+        int healthEnemy;
+        System.out.printf("The mage %s attacks the enemy!\n", this.getName());
+        enemy.takeDamage(damage);
+        healthEnemy = enemy.getHealth();
+        System.out.printf("The enemy %d health point left!\n", healthEnemy);
     }
 }

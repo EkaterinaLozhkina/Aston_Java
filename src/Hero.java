@@ -9,7 +9,12 @@ public class Hero {
         return name;
     }
 
-    public void attackEnemy(){
-        System.out.println("The hero attacks the enemy!");
+    public void attackEnemy(Enemy enemy){
+        int damage = 10;
+        int healthEnemy;
+        System.out.printf("The hero %s attacks the enemy!\n", name);
+        enemy.takeDamage(damage);
+        healthEnemy = enemy.getHealth();
+        System.out.printf("The enemy %d health point left!\n", healthEnemy);
     }
 }

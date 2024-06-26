@@ -4,10 +4,11 @@ public class TrainingGround {
         Hero mage = new Mage("Nana");
         Hero warrior = new Warrior("Ruby");
         Hero archer = new Archer("Mia");
+        Enemy enemy = new Enemy(100);
 
-        hero.attackEnemy();
-        mage.attackEnemy();
-        warrior.attackEnemy();
-        archer.attackEnemy();
+        hero.attackEnemy(enemy);
+        mage.attackEnemy(enemy);
+        warrior.attackEnemy(enemy);
+        archer.attackEnemy(enemy);
     }
 }

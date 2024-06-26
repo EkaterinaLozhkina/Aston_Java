@@ -4,7 +4,12 @@ public class Warrior extends Hero {
     }
 
     @Override
-    public void attackEnemy() {
-        System.out.println("The warrior attacks the enemy!");
+    public void attackEnemy(Enemy enemy) {
+        int damage = 15;
+        int healthEnemy;
+        System.out.printf("The warrior %s attacks the enemy!\n", this.getName());
+        enemy.takeDamage(damage);
+        healthEnemy = enemy.getHealth();
+        System.out.printf("The enemy %d health point left!\n", healthEnemy);
     }
 }
